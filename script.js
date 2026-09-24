@@ -251,3 +251,15 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+// Google Analytics: rastrear cliques no WhatsApp
+
+document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+    link.addEventListener('click', () => {
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click');
+        }
+
+    });
+});
