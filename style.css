@@ -728,15 +728,101 @@ h3 {
     color: var(--muted);
 }
 
-.location-card a {
+.location-card > a {
     color: var(--accent-dark);
 
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-.location-card a:hover {
+.location-card > a:hover {
     color: var(--dark);
+}
+
+
+/* ================================
+   GOOGLE REVIEW
+================================ */
+
+.google-review {
+    width: 100%;
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.google-review-divider {
+    width: 50px;
+    height: 1px;
+
+    margin: 0 auto 22px;
+
+    background: var(--border);
+}
+
+.google-review-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.google-review h4 {
+    margin-bottom: 7px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.google-review p {
+    max-width: 280px;
+
+    margin: 0 auto 17px;
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.google-review-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    border: 1px solid var(--accent);
+
+    color: var(--accent-dark);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.google-review-button:hover {
+    background: var(--accent);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+.google-star {
+    font-size: 0.95rem;
 }
 
 
@@ -1193,6 +1279,14 @@ h3 {
     }
 
     .location-buttons .button {
+        width: 100%;
+    }
+
+    .location-card {
+        padding: 35px 25px;
+    }
+
+    .google-review-button {
         width: 100%;
     }
 
