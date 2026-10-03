@@ -252,14 +252,63 @@ document.addEventListener("keydown", event => {
 
 });
 
-// Google Analytics: rastrear cliques no WhatsApp
+
+
+/* ================================
+   GOOGLE ANALYTICS
+================================ */
+
+
+/* Rastrear cliques no WhatsApp */
 
 document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+
     link.addEventListener('click', () => {
 
         if (typeof gtag === 'function') {
+
             gtag('event', 'whatsapp_click');
+
         }
 
     });
+
+});
+
+
+
+/* Rastrear cliques no Google Maps */
+
+document.querySelectorAll(
+    'a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]'
+).forEach((link) => {
+
+    link.addEventListener('click', () => {
+
+        if (typeof gtag === 'function') {
+
+            gtag('event', 'google_maps_click');
+
+        }
+
+    });
+
+});
+
+
+
+/* Rastrear cliques para avaliação no Google */
+
+document.querySelectorAll('[data-google-review]').forEach((link) => {
+
+    link.addEventListener('click', () => {
+
+        if (typeof gtag === 'function') {
+
+            gtag('event', 'google_review_click');
+
+        }
+
+    });
+
 });
